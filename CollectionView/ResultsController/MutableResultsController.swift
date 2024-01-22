@@ -625,11 +625,11 @@ public class MutableResultsController<Section: SectionType, Element: ResultType>
         self._sectionsCopy = nil
     }
     
-    @available(*, unavailable, message: "This functionality has been replaced with CollectionViewProvider.")
-    public var hasEmptyPlaceholder: Bool = false
-    
-    @available(*, unavailable, message: "This functionality has been replaced with CollectionViewProvider.")
-    public private(set) var placeholderChanges: CollectionViewProvider?
+//    @available(*, unavailable, message: "This functionality has been replaced with CollectionViewProvider.")
+//    public var hasEmptyPlaceholder: Bool = false
+//    
+//    @available(*, unavailable, message: "This functionality has been replaced with CollectionViewProvider.")
+//    public private(set) var placeholderChanges: CollectionViewProvider?
 }
 
 extension MutableResultsController {
