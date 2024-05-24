@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 func delay(_ delay: TimeInterval, block: @escaping (() -> Void)) {
     let mDelay = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 open class ScrollView: NSScrollView {
     override init(frame frameRect: NSRect) {

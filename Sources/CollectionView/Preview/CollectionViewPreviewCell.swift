@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 /// A protocol for CollectionViewCells that need to customize their transition when used in CollectionViewPreviewController.
 ///
