@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 public class SectionInfo<Section: SectionType, Element: Hashable>: Hashable {
     

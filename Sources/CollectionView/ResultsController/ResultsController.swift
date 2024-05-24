@@ -5,6 +5,7 @@
 //  Copyright © 2017 The Noun Project. All rights reserved.
 //
 
+import Cocoa
 import CoreData
 
 /// A ResultsController manages data in a way that is usable by a collection view.

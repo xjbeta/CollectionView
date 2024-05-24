@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 /// a CollectionViewPreviewControllerDelegate is responsible for providing data to a CollectionViewPreviewController.
 public protocol CollectionViewPreviewControllerDelegate: AnyObject {

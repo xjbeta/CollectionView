@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 /// A FetchedResultsController provides the same data store and change reporting as a MutableResultsController but sources it's contents from a CoreData context.
 ///

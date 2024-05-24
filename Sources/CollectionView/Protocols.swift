@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import AppKit
+import Cocoa
 
 /// The CollectionViewDataSource is responsible for providing the data and views required by a collection view
 ///

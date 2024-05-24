@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Cocoa
+import AppKit
 
 @available(*, unavailable, renamed: "CollectionViewProvider")
 public struct ResultsChangeSet { }

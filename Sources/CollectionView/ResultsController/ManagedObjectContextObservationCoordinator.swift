@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 fileprivate let nilKeyHash = UUID().hashValue
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 /// The CollectionReusableView class defines the behavior for all cells and supplementary views presented by a collection view. Reusable views are so named because the collection view places them on a reuse queue rather than deleting them when they are scrolled out of the visible bounds. Such a view can then be retrieved and repurposed for a different set of content.
 open class CollectionReusableView: NSView {
