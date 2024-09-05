@@ -66,7 +66,9 @@ import Foundation
     /// - parameter indexPath:            The indexPath for the item
     ///
     /// - returns: The height for the item
-    @objc optional func collectionView(_ collectionView: CollectionView, layout collectionViewLayout: CollectionViewLayout,
+    @objc optional func collectionView(_ collectionView: CollectionView, 
+									   layout collectionViewLayout: CollectionViewLayout,
+									   width itemWidth: CGFloat,
                                        heightForItemAt indexPath: IndexPath) -> CGFloat
     
     /// The aspect ration for the item at the given indexPath (Priority 1). Width and height must be greater than 0.
@@ -351,7 +353,10 @@ open class CollectionViewColumnLayout: CollectionViewLayout {
                 allIndexPaths.append(indexPath)
                 
                 let ratio = self.delegate?.collectionView?(cv, layout: self, aspectRatioForItemAt: indexPath)
-                let height = self.delegate?.collectionView?(cv, layout: self, heightForItemAt: indexPath)
+				
+				let width = round((contentWidth - (CGFloat(colCount - 1) * columnSpacing)) / CGFloat(colCount))
+				
+				let height = self.delegate?.collectionView?(cv, layout: self, width: width, heightForItemAt: indexPath)
                 
                 section.addItem(for: indexPath,
                                 aspectRatio: ratio,
