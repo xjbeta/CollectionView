@@ -62,7 +62,8 @@ import Foundation
     /// The height for the item at the given indexPath (Priority 2)
     ///
     /// - parameter collectionView:       The collection view the item is in
-    /// - parameter collectionViewLayout: The CollectionViewLayout
+	/// - parameter collectionViewLayout: The CollectionViewLayout
+	/// - parameter itemWidth: 			  The width for the item
     /// - parameter indexPath:            The indexPath for the item
     ///
     /// - returns: The height for the item

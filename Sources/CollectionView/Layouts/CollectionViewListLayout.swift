@@ -15,15 +15,17 @@ import Foundation
     /*-------------------------------------------------------------------------------*/
     /// Asks the delegate for the height of the item at index path
     ///
-    /// - Parameter collectionView: The asking collection view
-    /// - Parameter collectionViewLayout: The layout
-    /// - Parameter indexPath: The index path for the item in question
-    ///
-    /// - Returns: The height for the item
-    @objc optional func collectionView(_ collectionView: CollectionView,
-                                       layout collectionViewLayout: CollectionViewLayout,
-                                       heightForItemAt indexPath: IndexPath) -> CGFloat
-    
+	/// - Parameter collectionView: The asking collection view
+	/// - Parameter collectionViewLayout: The layout
+	/// - Parameter itemWidth: 			  The width for the item
+	/// - Parameter indexPath: The index path for the item in question
+	///
+	/// - Returns: The height for the item
+	@objc optional func collectionView(_ collectionView: CollectionView,
+									   layout collectionViewLayout: CollectionViewLayout,
+									   width itemWidth: CGFloat,
+									   heightForItemAt indexPath: IndexPath) -> CGFloat
+	
     /// Asks the delegate for the height of the header in a given section
     ///
     /// - Parameter collectionView: The asking collection view
@@ -195,7 +197,7 @@ public final class CollectionViewListLayout: CollectionViewLayout {
                     allIndexPaths.append(ip)
                     
                     let attrs = CollectionViewLayoutAttributes(forCellWith: ip)
-                    let rowHeight: CGFloat = self.delegate?.collectionView?(cv, layout: self, heightForItemAt: ip) ?? self.itemHeight
+					let rowHeight: CGFloat = self.delegate?.collectionView?(cv, layout: self, width: itemWidth, heightForItemAt: ip) ?? self.itemHeight
                     attrs.frame = NSRect(x: xPos, y: yPos, width: itemWidth, height: rowHeight)
                     newTop = yPos + rowHeight
                     yPos = newTop + rowSpacing
